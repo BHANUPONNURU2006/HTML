@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  background-color: #f0f0f0;
+}
+.header {
+  height: 60px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainSection {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto; 
+}
+.footer {
+  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

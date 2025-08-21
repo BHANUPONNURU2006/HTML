@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Layout</title>
+    
+   <link rel="stylesheet" href="project3.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 15px 0;
+        }
+        .main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>🏠 Home</li>
+                <li>📄 About</li>
+                <li>🛠️ Services</li>
+                <li>📞 Contact</li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Welcome to My Website</h1>
+            <p>This is the main content area. Resize the browser window to see how the layout adapts for smaller screens.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <body>
+            <form id="regform" onsubmit="return display()">
+                NAME: <input type="text" id="cname"><br><br>
+                <span id="nameerror" style="color: red;font-size: 10px;"></span>
+            EDUCATION: <input type="text" id="education"><br><br>
+            <span id="eduerror" style="color: red;font-size: 10px;"></span>
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                YOU NAME IS ENTERED AS <span id="spanname" > </span> AND MY EDUCATION QUALIFICATION IS <span id="spaneducation"> </span>
+            </div>
+            <script>
+                const myform = document.getElementById("regform");
+                myform.addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    var cname = document.getElementById("cname").value;
+                    var education = document.getElementById("education").value; 
+                    document.getElementById("spanname").innerHTML = cname;
+                    document.getElementById("spaneducation").innerHTML = education;
+                });
+            </script>
+        </body>
+    </head>
+</html>

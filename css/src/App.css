@@ -1,0 +1,30 @@
+.slidebar {
+  width: 120px;
+  background-color: blue;
+  color: thistle;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.slidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slidebar li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  color: thistle;
+}
+
+.slidebar li:last-child {
+  border-bottom: none;
+}
+
+.slidebar li:hover {
+  background-color: #4169e1;
+  color: #fff;
+}
