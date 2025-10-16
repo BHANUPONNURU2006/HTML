@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Sans-Serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    font-size: 14px;
+    padding: 1px;
+  }
+
+  h1, h2 {
+    font-size: 18px;
+  }
+}
