@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Step Student Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .hidden { display: none; }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-next { background: blue; color: white; }
+    .btn-back { background: gray; color: white; }
+    .btn-submit { background: green; color: white; }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- STEP 1 -->
+    <div id="step1">
+      <h2>Step 1 – Enter Details</h2>
+
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
+
+      <button class="btn-next" onclick="goToStep2()">Next</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="step2" class="hidden">
+      <h2>Step 2 – Summary</h2>
+
+      <p><b>Name:</b> <span id="showName"></span></p>
+      <p><b>Email:</b> <span id="showEmail"></span></p>
+
+      <button class="btn-back" onclick="goBack()">Back</button>
+      <button class="btn-submit" onclick="submitForm()">Submit</button>
+    </div>
+
+  </div>
+
+  <script>
+    function goToStep2() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+
+      if (name === "" || email === "") {
+        alert("Please enter both Name and Email!");
+        return;
+      }
+
+      document.getElementById("showName").innerText = name;
+      document.getElementById("showEmail").innerText = email;
+
+      document.getElementById("step1").classList.add("hidden");
+      document.getElementById("step2").classList.remove("hidden");
+    }
+
+    function goBack() {
+      document.getElementById("step2").classList.add("hidden");
+      document.getElementById("step1").classList.remove("hidden");
+    }
+
+    function submitForm() {
+      alert("Form Submitted Successfully!");
+    }
+  </script>
+
+</body>
+</html>
